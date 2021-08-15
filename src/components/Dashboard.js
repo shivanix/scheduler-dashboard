@@ -32,7 +32,10 @@ const data = [
 class Dashboard extends Component {
   state = {
     loading: false,
-    focused: null
+    focused: null,
+    days: [],
+    appointments: {},
+    interviewers: {}
 
   };
 
