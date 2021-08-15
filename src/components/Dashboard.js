@@ -36,7 +36,13 @@ class Dashboard extends Component {
 
   };
 
-  componentDidMount() {
+  selectPanel(id) {
+    this.setState(previousState => ({
+    focused: previousState.focused !== null ? null : id
+  }));
+   }
+
+   componentDidMount() {
     const focused = JSON.parse(localStorage.getItem("focused"));
 
     if (focused) {
